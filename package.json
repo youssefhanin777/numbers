@@ -1,7 +1,7 @@
 {
   "name": "discord-online-forever-main",
   "version": "1.0.0",
-  "description": "Keep ypou Discord profile online forever",
+  "description": "Keep ypou Discord profile Streaming forever",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
