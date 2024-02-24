@@ -1,13 +1,22 @@
-const Eris = require("eris");
-const keep_alive = require('./keep_alive.js')
+const { Client } = require('discord.js-selfbot-v13');
+const client = new Client({checkUpdate:false}); 
+
+client.on('ready', async () => {
+  console.log(`${client.user.username} is Ready For Working 24/7!`);
+})
+
+
+    const statuses = [
+        ' 🇵🇸 | Palestine.js'
+    ];
+    let i = 0;
+    setInterval(() => {
         client.user.setActivity(statuses[i], {
             type: 'STREAMING',
             url: 'https://www.twitch.tv/youzarx'
         });
-const bot = new Eris(process.env.token);
+        i = ++i % statuses.length;
+    }, 1e4);
 
-bot.on("error", (err) => {
-  console.error(err); 
-});
 
-bot.connect();
+client.login(process.env.token);
